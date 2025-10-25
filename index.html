@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiminini Nuru Women</title>
+    <link rel="icon" type="image/png" href="/nuru_logo2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e81a50;
+            --secondary: #000000;
+            --light: #f8f9fa;
+            --dark: #333333;
+            --white: #ffffff;
+            --shadow: 0 6px 20px rgba(0,0,0,0.1);
+            --gradient: linear-gradient(135deg, var(--primary), #c2185b);
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header & Navigation */
+        .nuru-logo-modern {
+            height: 70px;
+            width: auto;
+            border-radius: 8px;        /* soft corners */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: transform .22s cubic-bezier(.2,.9,.3,1), box-shadow .22s;
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          .nuru-logo-modern:hover,
+          .nuru-logo-modern:focus {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+            outline: none;
+          }
+          
+        .navbar {
+            background: var(--gradient) !important;
+            box-shadow: var(--shadow);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--white) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+        }
+        
+        .btn-donate {
+            background: var(--white);
+            color: var(--primary);
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-donate:hover {
+            background: var(--light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./cover.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn-hero {
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hero:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Cards Section */
+        .section-title {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: var(--light);
+            padding: 80px 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            transform: scale(1.05);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .stat-text {
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn-cta {
+            background: var(--white);
+            color: var(--primary);
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-cta:hover {
+            background: var(--light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            margin: 15px;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 60px 0 0;
+        }
+        
+        .footer-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+        }
+        
+        .footer-social a {
+            color: var(--light);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            color: var(--primary);
+            transform: scale(1.2);
+        }
+        
+        .footer-bottom {
+            background: rgba(0,0,0,0.2);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        /* Floating Tools */
+        .floating-tools {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .floating-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .floating-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+        
+        .accessibility-panel, .language-panel {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            border: 1px solid var(--primary);
+        }
+        
+        .accessibility-panel.active, .language-panel.active {
+            display: block;
+        }
+        
+        /* Accessibility Features */
+        body.high-contrast { 
+            background: #000; 
+            color: #fff; 
+        }
+        
+        body.high-contrast a { 
+            color: #ff0; 
+        }
+        
+        body.high-contrast .btn-hero, 
+        body.high-contrast .btn-cta, 
+        body.high-contrast .btn-donate { 
+            background: #ff0; 
+            color: #000; 
+        }
+        
+        body.high-contrast .navbar { 
+            background: #000 !important; 
+        }
+        
+        body.high-contrast footer { 
+            background: #000; 
+            color: #ff0; 
+        }
+        
+        body.wide-spacing { 
+            letter-spacing: 0.05em; 
+            word-spacing: 0.1em; 
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .btn-hero, .btn-cta {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .accessibility-panel, .language-panel {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Sticky Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                  <img src="./nurulogo.png" alt="NURU Logo" class="nuru-logo-modern">
+             </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home" data-en="Home" data-de="Startseite" data-fr="Accueil">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html" data-en="About Us" data-de="Über uns" data-fr="À propos de nous">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./work.html" data-en="Our Work" data-de="Unsere Arbeit" data-fr="Notre travail">Our Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./getInvolved.html" data-en="Get Involved" data-de="Mitmachen" data-fr="Participer">Get Involved</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-donate ms-3" data-bs-toggle="modal" data-bs-target="#donationModal" data-en="Donate" data-de="Spenden" data-fr="Faire un don">
+                        <i class="bi bi-heart-fill me-2"></i>Donate
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 data-en="Empowering Visually Impaired Women in Kiminini" data-de="Stärkung sehbehinderter Frauen in Kiminini" data-fr="Autonomisation des femmes malvoyantes à Kiminini">Empowering Visually Impaired Women in Kiminini</h1>
+                    <p data-en="We provide vocational training, life skills, and opportunities for blind and partially sighted women to thrive and lead." data-de="Wir bieten berufliche Ausbildung, Lebenskompetenzen und Möglichkeiten für blinde und sehbehinderte Frauen, um zu gedeihen und zu führen." data-fr="Nous fournissons une formation professionnelle, des compétences de vie et des opportunités aux femmes aveugles et malvoyantes pour prospérer et diriger.">We provide vocational training, life skills, and opportunities for blind and partially sighted women to thrive and lead.</p>
+                    <div class="mt-4">
+                        <button class="btn btn-hero" data-bs-toggle="modal" data-bs-target="#donationModal" data-en="Support Us" data-de="Unterstützen Sie uns" data-fr="Soutenez-nous">
+                            <i class="bi bi-hand-holding-heart me-2"></i>Support Us
+                        </button>
+                        <button class="btn btn-hero" data-en="Learn More" data-de="Mehr erfahren" data-fr="En savoir plus">
+                            <i class="bi bi-info-circle me-2"></i>Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas Section -->
+    <section class="py-5" id="about">
+        <div class="container">
+            <h2 class="text-center section-title" data-en="Our Focus Areas" data-de="Unsere Schwerpunkte" data-fr="Nos domaines d'intervention">Our Focus Areas</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="./WhatsApp Image 2025-10-25 at 10.04.29 (2).jpeg" class="card-img-top" alt="Vocational Skills">
+                        <div class="card-body">
+                            <h5 class="card-title" data-en="Vocational Skills" data-de="Berufliche Fähigkeiten" data-fr="Compétences professionnelles">Vocational Skills</h5>
+                            <p class="card-text" data-en="Our workshops teach sewing, reusable sanitary pad production, and other skills for sustainable income and self-reliance." data-de="Unsere Workshops lehren Nähen, Produktion wiederverwendbarer Sanitärpads und andere Fähigkeiten für nachhaltiges Einkommen und Selbstständigkeit." data-fr="Nos ateliers enseignent la couture, la production de serviettes hygiéniques réutilisables et d'autres compétences pour un revenu durable et l'autonomie.">Our workshops teach sewing, reusable sanitary pad production, and other skills for sustainable income and self-reliance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="./WhatsApp Image 2025-10-25 at 10.04.29 (1).jpeg" class="card-img-top" alt="Health & Hygiene">
+                        <div class="card-body">
+                            <h5 class="card-title" data-en="Health & Hygiene" data-de="Gesundheit & Hygiene" data-fr="Santé & Hygiène">Health & Hygiene</h5>
+                            <p class="card-text" data-en="Tactile learning and guidance on menstrual hygiene and personal care empower women to lead healthier lives." data-de="Taktiles Lernen und Anleitung zu Menstruationshygiene und persönlicher Pflege stärken Frauen zu einem gesünderen Leben." data-fr="L'apprentissage tactile et les conseils sur l'hygiène menstruelle et les soins personnels autonomisent les femmes pour une vie plus saine.">Tactile learning and guidance on menstrual hygiene and personal care empower women to lead healthier lives.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="./WhatsApp Image 2025-10-25 at 10.04.29 (3).jpeg" class="card-img-top" alt="Sustainability">
+                        <div class="card-body">
+                            <h5 class="card-title" data-en="Sustainability" data-de="Nachhaltigkeit" data-fr="Durabilité">Sustainability</h5>
+                            <p class="card-text" data-en="Eco-friendly production of reusable sanitary pads reduces waste and benefits both communities and the environment." data-de="Umweltfreundliche Produktion wiederverwendbarer Sanitärpads reduziert Abfall und nützt Gemeinschaften und Umwelt." data-fr="La production écologique de serviettes hygiéniques réutilisables réduit les déchets et profite aux communautés et à l'environnement.">Eco-friendly production of reusable sanitary pads reduces waste and benefits both communities and the environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="./WhatsApp Image 2025-10-25 at 10.04.29 (4).jpeg" class="card-img-top" alt="Community Impact">
+                        <div class="card-body">
+                            <h5 class="card-title" data-en="Community Impact" data-de="Gemeinschaftswirkung" data-fr="Impact communautaire">Community Impact</h5>
+                            <p class="card-text" data-en="We foster confidence and leadership within the community, enabling women to mentor others and engage actively in society." data-de="Wir fördern Selbstvertrauen und Führung in der Gemeinschaft, ermöglichen Frauen, andere zu mentorieren und aktiv in der Gesellschaft teilzunehmen." data-fr="Nous favorisons la confiance et le leadership au sein de la communauté, permettant aux femmes de mentorer les autres et de s'engager activement dans la société.">We foster confidence and leadership within the community, enabling women to mentor others and engage actively in society.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-text" data-en="Women Trained" data-de="Frauen ausgebildet" data-fr="Femmes formées">Women Trained</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-text" data-en="Reusable Pads Produced" data-de="Wiederverwendbare Pads produziert" data-fr="Serviettes réutilisables produites">Reusable Pads Produced</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <div class="stat-number">15</div>
+                        <div class="stat-text" data-en="Workshops Conducted" data-de="Workshops durchgeführt" data-fr="Ateliers menés">Workshops Conducted</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="get-involved">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 data-en="Join Us in Empowering Women" data-de="Schließen Sie sich uns an, um Frauen zu stärken" data-fr="Rejoignez-nous pour autonomiser les femmes">Join Us in Empowering Women</h2>
+                    <p data-en="Your support provides training, materials, and opportunities for visually impaired women to gain independence and contribute meaningfully." data-de="Ihre Unterstützung bietet Ausbildung, Materialien und Möglichkeiten für sehbehinderte Frauen, Unabhängigkeit zu erlangen und sinnvoll beizutragen." data-fr="Votre soutien fournit formation, matériaux et opportunités aux femmes malvoyantes pour gagner en indépendance et contribuer de manière significative.">Your support provides training, materials, and opportunities for visually impaired women to gain independence and contribute meaningfully.</p>
+                    <div class="mt-4">
+                        <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#donationModal" data-en="Donate Now" data-de="Jetzt spenden" data-fr="Faire un don maintenant">
+                            <i class="bi bi-donate me-2"></i>Donate Now
+                        </button>
+                        <button class="btn btn-cta" data-en="Volunteer" data-de="Freiwilliger" data-fr="Bénévole">
+                            <i class="bi bi-people-fill me-2"></i>Volunteer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-en="What Our Women Say" data-de="Was unsere Frauen sagen" data-fr="Ce que disent nos femmes">What Our Women Say</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text" data-en="The training gave me skills I never thought possible. I now support my family with pride." data-de="Die Ausbildung gab mir Fähigkeiten, die ich nie für möglich gehalten hätte. Ich unterstütze jetzt meine Familie mit Stolz." data-fr="La formation m'a donné des compétences que je n'aurais jamais cru possibles. Je soutiens maintenant ma famille avec fierté.">The training gave me skills I never thought possible. I now support my family with pride.</p>
+                                <div class="testimonial-author">Jane A., Trainee</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text" data-en="NURU gave me the confidence to mentor others and speak up in my community." data-de="NURU gab mir das Selbstvertrauen, andere zu mentorieren und in meiner Gemeinschaft zu sprechen." data-fr="NURU m'a donné la confiance pour mentorer les autres et parler dans ma communauté.">NURU gave me the confidence to mentor others and speak up in my community.</p>
+                                <div class="testimonial-author">Mary K., Mentor</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text" data-en="I feel independent and valued, contributing to my community in ways I never imagined." data-de="Ich fühle mich unabhängig und geschätzt, trage zu meiner Gemeinschaft auf Weisen bei, die ich mir nie vorgestellt hätte." data-fr="Je me sens indépendante et valorisée, contribuant à ma communauté de manières que je n'aurais jamais imaginées.">I feel independent and valued, contributing to my community in ways I never imagined.</p>
+                                <div class="testimonial-author">Grace L., Trainee</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title" data-en="About NURU" data-de="Über NURU" data-fr="À propos de NURU">About NURU</h5>
+                    <p data-en="Kiminini Nuru Women empowers visually impaired women through vocational training, life skills, and community inclusion." data-de="Kiminini Nuru Women stärkt sehbehinderte Frauen durch berufliche Ausbildung, Lebenskompetenzen und Gemeinschaftsintegration." data-fr="Kiminini Nuru Women autonomise les femmes malvoyantes par la formation professionnelle, les compétences de vie et l'inclusion communautaire.">Kiminini Nuru Women empowers visually impaired women through vocational training, life skills, and community inclusion.</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title" data-en="Quick Links" data-de="Schnelle Links" data-fr="Liens rapides">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="./index.html"><i class="bi bi-house me-2"></i><span data-en="Home" data-de="Startseite" data-fr="Accueil">Home</span></a>
+                        <a href="./about.html"><i class="bi bi-info-circle me-2"></i><span data-en="About Us" data-de="Über uns" data-fr="À propos">About Us</span></a>
+                        <a href="./work.html"><i class="bi bi-briefcase me-2"></i><span data-en="Our Work" data-de="Unsere Arbeit" data-fr="Notre travail">Our Work</span></a>
+                        <a href="./getInvolved.html"><i class="bi bi-people me-2"></i><span data-en="Get Involved" data-de="Mitmachen" data-fr="Participer">Get Involved</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title" data-en="Contact Us" data-de="Kontaktieren Sie uns" data-fr="Contactez-nous">Contact Us</h5>
+                    <div class="footer-contact">
+                        <p><i class="bi bi-envelope me-2"></i>info@nuruwomen.org</p>
+                        <p><i class="bi bi-telephone me-2"></i>+254 123 456 789</p>
+                        <p><i class="bi bi-geo-alt me-2"></i>Kiminini, Kenya</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title" data-en="Follow Us" data-de="Folgen Sie uns" data-fr="Suivez-nous">Follow Us</h5>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p data-en="&copy; 2025 Kiminini Nuru Women. All rights reserved." data-de="© 2025 Kiminini Nuru Women. Alle Rechte vorbehalten." data-fr="© 2025 Kiminini Nuru Women. Tous droits réservés.">&copy; 2025 Kiminini Nuru Women. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donation Modal -->
+    <div class="modal fade" id="donationModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-en="Donate to Empower" data-de="Spenden zur Stärkung" data-fr="Faire un don pour autonomiser">Donate to Empower</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="donationName" class="form-label" data-en="Full Name" data-de="Vollständiger Name" data-fr="Nom complet">Full Name</label>
+                            <input type="text" class="form-control" id="donationName" placeholder="Enter your full name" data-en-placeholder="Enter your full name" data-de-placeholder="Geben Sie Ihren vollständigen Namen ein" data-fr-placeholder="Entrez votre nom complet">
+                        </div>
+                        <div class="mb-3">
+                            <label for="donationEmail" class="form-label" data-en="Email Address" data-de="E-Mail-Adresse" data-fr="Adresse e-mail">Email Address</label>
+                            <input type="email" class="form-control" id="donationEmail" placeholder="Enter your email" data-en-placeholder="Enter your email" data-de-placeholder="Geben Sie Ihre E-Mail ein" data-fr-placeholder="Entrez votre e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="donationAmount" class="form-label" data-en="Donation Amount (€ or KSh)" data-de="Spendenbetrag (€ oder KSh)" data-fr="Montant du don (€ ou KSh)">Donation Amount (€ or KSh)</label>
+                            <input type="number" class="form-control" id="donationAmount" placeholder="Enter amount" data-en-placeholder="Enter amount" data-de-placeholder="Betrag eingeben" data-fr-placeholder="Entrez le montant">
+                        </div>
+                        <div class="mb-3">
+                            <label for="donationCountry" class="form-label" data-en="Country / Region" data-de="Land / Region" data-fr="Pays / Région">Country / Region</label>
+                            <input type="text" class="form-control" id="donationCountry" placeholder="Enter your country" data-en-placeholder="Enter your country" data-de-placeholder="Geben Sie Ihr Land ein" data-fr-placeholder="Entrez votre pays">
+                        </div>
+                        <div class="mb-3">
+                            <label for="donationPayment" class="form-label" data-en="Payment Method" data-de="Zahlungsmethode" data-fr="Méthode de paiement">Payment Method</label>
+                            <select class="form-select" id="donationPayment">
+                                <option selected disabled data-en="Select payment method" data-de="Zahlungsmethode auswählen" data-fr="Sélectionnez la méthode de paiement">Select payment method</option>
+                                <option value="paypal" data-en="PayPal" data-de="PayPal" data-fr="PayPal">PayPal</option>
+                                <option value="bank" data-en="Bank Transfer" data-de="Banküberweisung" data-fr="Virement bancaire">Bank Transfer</option>
+                                <option value="mpesa" data-en="M-Pesa" data-de="M-Pesa" data-fr="M-Pesa">M-Pesa</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="donationMessage" class="form-label" data-en="Message (Optional)" data-de="Nachricht (Optional)" data-fr="Message (Optionnel)">Message (Optional)</label>
+                            <textarea class="form-control" id="donationMessage" rows="3" placeholder="Any message for us?" data-en-placeholder="Any message for us?" data-de-placeholder="Irgendeine Nachricht für uns?" data-fr-placeholder="Un message pour nous ?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" data-en="Donate Securely" data-de="Sicher spenden" data-fr="Faire un don en toute sécurité">Donate Securely</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Tools -->
+    <div class="floating-tools">
+        <button class="floating-btn" id="accessibility-toggle">
+            <i class="bi bi-universal-access"></i>
+        </button>
+        <button class="floating-btn" id="language-toggle">
+            <img src="https://flagcdn.com/w20/gb.png" alt="English" width="20" height="15">
+        </button>
+        
+        <div class="accessibility-panel" id="accessibility-panel">
+            <h5 data-en="Accessibility Settings" data-de="Barrierefreiheitseinstellungen" data-fr="Paramètres d'accessibilité">Accessibility Settings</h5>
+            <div class="mb-3">
+                <label for="fontSize" class="form-label" data-en="Font Size" data-de="Schriftgröße" data-fr="Taille de la police">Font Size</label>
+                <select class="form-select" id="fontSize">
+                    <option value="1" data-en="Normal" data-de="Normal" data-fr="Normal">Normal</option>
+                    <option value="1.2" data-en="Large" data-de="Groß" data-fr="Grand">Large</option>
+                    <option value="1.5" data-en="Extra Large" data-de="Extra groß" data-fr="Extra grand">Extra Large</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="contrastMode" class="form-label" data-en="Contrast Mode" data-de="Kontrastmodus" data-fr="Mode de contraste">Contrast Mode</label>
+                <select class="form-select" id="contrastMode">
+                    <option value="normal" data-en="Normal" data-de="Normal" data-fr="Normal">Normal</option>
+                    <option value="high-contrast" data-en="High Contrast" data-de="Hoher Kontrast" data-fr="Haut contraste">High Contrast</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="textSpacing" class="form-label" data-en="Text Spacing" data-de="Textabstand" data-fr="Espacement du texte">Text Spacing</label>
+                <select class="form-select" id="textSpacing">
+                    <option value="normal" data-en="Normal" data-de="Normal" data-fr="Normal">Normal</option>
+                    <option value="wide" data-en="Wide" data-de="Breit" data-fr="Large">Wide</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="language-panel" id="language-panel">
+            <h5 data-en="Select Language" data-de="Sprache auswählen" data-fr="Sélectionner la langue">Select Language</h5>
+            <ul class="list-unstyled">
+                <li><a href="#" class="d-flex align-items-center py-2 text-decoration-none text-dark" data-lang="en">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="me-2" width="20" height="15">
+                    <span data-en="English" data-de="Englisch" data-fr="Anglais">English</span>
+                </a></li>
+                <li><a href="#" class="d-flex align-items-center py-2 text-decoration-none text-dark" data-lang="de">
+                    <img src="https://flagcdn.com/w20/de.png" alt="German" class="me-2" width="20" height="15">
+                    <span data-en="German" data-de="Deutsch" data-fr="Allemand">German</span>
+                </a></li>
+                <li><a href="#" class="d-flex align-items-center py-2 text-decoration-none text-dark" data-lang="fr">
+                    <img src="https://flagcdn.com/w20/fr.png" alt="French" class="me-2" width="20" height="15">
+                    <span data-en="French" data-de="Französisch" data-fr="Français">French</span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Language functionality from original code
+        const flagIcons = {
+            en: 'https://flagcdn.com/w20/gb.png',
+            de: 'https://flagcdn.com/w20/de.png',
+            fr: 'https://flagcdn.com/w20/fr.png'
+        };
+
+        function updateLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`) || el.textContent;
+                if (el.placeholder !== undefined) {
+                    el.placeholder = el.getAttribute(`data-${lang}-placeholder`) || el.placeholder;
+                }
+            });
+            const languageButtonImg = document.querySelector('#language-toggle img');
+            languageButtonImg.src = flagIcons[lang];
+            languageButtonImg.alt = lang === 'en' ? 'English' : lang === 'de' ? 'German' : 'French';
+            localStorage.setItem('language', lang);
+        }
+
+        // Accessibility Panel Toggle
+        document.getElementById('accessibility-toggle').addEventListener('click', function() {
+            const panel = document.getElementById('accessibility-panel');
+            panel.classList.toggle('active');
+            document.getElementById('language-panel').classList.remove('active');
+        });
+
+        // Language Panel Toggle
+        document.getElementById('language-toggle').addEventListener('click', function() {
+            const panel = document.getElementById('language-panel');
+            panel.classList.toggle('active');
+            document.getElementById('accessibility-panel').classList.remove('active');
+        });
+
+        // Close panels when clicking outside
+        document.addEventListener('click', function(e) {
+            const accessibilityPanel = document.getElementById('accessibility-panel');
+            const languagePanel = document.getElementById('language-panel');
+            const accessibilityToggle = document.getElementById('accessibility-toggle');
+            const languageToggle = document.getElementById('language-toggle');
+            
+            if (!accessibilityPanel.contains(e.target) && !accessibilityToggle.contains(e.target)) {
+                accessibilityPanel.classList.remove('active');
+            }
+            
+            if (!languagePanel.contains(e.target) && !languageToggle.contains(e.target)) {
+                languagePanel.classList.remove('active');
+            }
+        });
+
+        // Accessibility Settings
+        document.getElementById('fontSize').addEventListener('change', function() {
+            document.documentElement.style.fontSize = this.value + 'rem';
+            localStorage.setItem('fontSize', this.value);
+        });
+
+        document.getElementById('contrastMode').addEventListener('change', function() {
+            document.body.classList.toggle('high-contrast', this.value === 'high-contrast');
+            localStorage.setItem('contrastMode', this.value);
+        });
+
+        document.getElementById('textSpacing').addEventListener('change', function() {
+            document.body.classList.toggle('wide-spacing', this.value === 'wide');
+            localStorage.setItem('textSpacing', this.value);
+        });
+
+        // Load saved settings
+        window.addEventListener('DOMContentLoaded', function() {
+            const fontSize = localStorage.getItem('fontSize') || '1';
+            const contrastMode = localStorage.getItem('contrastMode') || 'normal';
+            const textSpacing = localStorage.getItem('textSpacing') || 'normal';
+            const savedLanguage = localStorage.getItem('language') || 'en';
+            
+            document.getElementById('fontSize').value = fontSize;
+            document.getElementById('contrastMode').value = contrastMode;
+            document.getElementById('textSpacing').value = textSpacing;
+            
+            document.documentElement.style.fontSize = fontSize + 'rem';
+            document.body.classList.toggle('high-contrast', contrastMode === 'high-contrast');
+            document.body.classList.toggle('wide-spacing', textSpacing === 'wide');
+            
+            // Apply saved language
+            updateLanguage(savedLanguage);
+        });
+
+        // Language Switcher
+        document.querySelectorAll('.language-panel a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang');
+                updateLanguage(lang);
+                document.getElementById('language-panel').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
